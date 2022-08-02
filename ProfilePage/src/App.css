@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  min-width: 450px;
+  margin: auto;
+  height: 100vh;
+}
+
+.headerSec {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.headerSec > img {
+  width: 100%;
+}
+
+.about {
+  text-align: center;
+  line-height: 0px;
+  color: white;
+}
+
+.name {
+  font-weight:bolder;
+  font-size: 2.5rem;
+}
+.dev {
+  font-size: 1.2rem;
+}
+.city{
+  line-height: 50px;
+}
+
+.details--about{
+  color: white;
+  padding: 20px 40px;
+}
+.details--about > h1 {
+  line-height: 5px;
+  font-size: 1.5rem;
+}
+
+.connect {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 86%;
+}
+.email {
+  font-weight: bold;
+  border-radius: 15px;
+  width: 40%;
+  padding: 13px;
+  text-decoration: none;
+  background-color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.linkedin {
+  font-weight: bold;
+  border-radius: 15px;
+  width: 40%;
+  padding: 13px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: rgb(56, 100, 212);
+  color: white;
+}
+
+.linkedin:hover {
+  background-color: rgb(191, 63, 104);
+}
+.email:hover {
+  background-color: rgb(191, 63, 116);
+  color: white;
+}
+
+.Footer--imgs {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  width: 90%;
+}
+.instaLogo {
+  width: 60px;
+  padding: 10px;
+}
+.twitterLogo {
+  width: 60px;
+  padding: 10px;
+}
+.youtubeLogo {
+  width: 65px;
+  padding: 10px 10px 0px 15px;
+}
+.linkedinLogo {
+  width: 65px;
+  padding: 10px 10px 0px 15px;
+}
+.Footer--imgs a:hover{
+  box-shadow: 0px 20px 100px 2px whitesmoke;
+}

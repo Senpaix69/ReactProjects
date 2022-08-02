@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  border: 1px solid black;
+  background-color: beige;
+  width: 50%;
+  max-width: 700px;
+  min-width: 500px;
+  margin: auto;
+}
+
+nav {
+  height: 70px;
+  display: flex;
+  padding: 20px 36px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+.bnb--logo {
+  max-width: 100px;
+}
+
+section {
+  padding: 20px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero--photo {
+  max-width: 498px;
+  align-self: center;
+}
+
+.hero--header {
+  margin-bottom: 16px;
+}
+
+.hero--text {
+  margin-top: 0;
+}
+
+.cards-list {
+  display: flex;
+  overflow: scroll;
+}
+
+.card {
+  width: 175px;
+  font-size: 12px;
+  padding: 10px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.card--badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: white;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grey {
+  color: #918E9B;
+}
+
+.card--img {
+  width: 100%;
+  height: 270px;
+  border-radius: 10px;
+}
+
+.card--stats {
+  display: flex;
+  align-items: center;
+}
+
+.card--star {
+  height: 14px;
+}
