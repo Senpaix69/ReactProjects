@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  padding: 0;
+  height: 100vh;
+}
+
+.App {
+  margin: auto;
+  max-width: 970px;
+  min-width: 500px;
+}
+
+.Nav {
+  max-width: 970px;
+  min-width: 500px;
+  z-index: -9;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 10%;
+  border-radius: 300px;
+  filter: blur(40px);
+  -webkit-filter: blur(40px);
+}
+
+.Dark-Navbar {
+  background-color: #29e7cd;
+  background-image: linear-gradient(315deg, #29e7cd 2%, #fffbfc 74%);
+}
+
+.Light-Navbar {
+  background-color: #29e7cea0;
+  background-image: linear-gradient(315deg, #29e7ce39 0%, #000000 80%, #29e7cd 90%);
+}
+
+.Dark-Btn {
+  color: black;
+}
+
+.Navbar {
+  display: flex;
+  padding: 10px;
+  padding-top: 10px;
+  height: 90px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navbar--Header {
+  display: flex;
+  gap: 0.7rem;
+  font-size: 1rem;
+}
+
+h1:nth-child(1) {
+  color: rgb(91, 223, 199);
+}
+
+button {
+  text-align: center;
+  padding: 4px 8px;
+  border: 3px solid;
+  border-color: rgb(91, 223, 199);
+  border-radius: 40px;
+  font-weight: 600;
+  background-color: #29e7cd;
+  background-image: linear-gradient(315deg, #29e7cd 0%, #fffbfc 74%);
+
+}
+
+button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(315deg, #29e7cd 5%, #ffffff 100%);
+}
+
+.Search {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-top: 0;
+}
+
+input {
+  border: 4px solid rgb(91, 223, 199);
+  border-radius: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.Notes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 90%;
+  padding-top: 3px;
+}
+
+.Note {
+  padding-left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 250px;
+}
+
+.Note--Card {
+  padding: 10px;
+  width: 94%;
+  height: 93%;
+  border-radius: 20px;
+  background-color: #29e7cd;
+  background-image: linear-gradient(315deg, #29e7cd 0%, #fffbfc 74%, #29e7cd 1%);
+  position: relative;
+}
+
+.Note--Card>h1 {
+  font-size: large;
+  color: rgb(2, 83, 34);
+  position: absolute;
+  top: 5px;
+}
+
+.para {
+  position: absolute;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.15);
+  width: 95%;
+  top: 50px;
+  height: 60%;
+}
+
+.Note--Card>button {
+  position: absolute;
+  bottom: 6px;
+  right: 15px;
+}
+
+.Note--Card>span {
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  font-size: small;
+  opacity: 90%;
+}
+
+.Add--Title {
+  width: 100%;
+  height: 20%;
+  font-size: large;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  outline-width: 0;
+  background: none;
+}
+
+textarea {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5px;
+  font-size: 15px;
+  border: none;
+  background: none;
+  height: 99%;
+  width: 99%;
+  outline-width: 0;
+  resize: none;
+}
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.connect {
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 2px;
+  text-align: center;
+}
+
+.Footer {
+  padding-bottom: 20px;
+}
+
+.imag {
+  background-color: #29e7cd;
+  background-image: linear-gradient(315deg, #29e7cd 1%, #fffbfc 80%,  #29e7cd 1%);
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  align-items: center;
+  border-radius: 50px;
+  margin: auto;
+  width: 500px;
+  max-width: 100px;
+  min-width: 350px;
+}
+
+#git {
+  width: 75px;
+}
+
+.social {
+  width: 60px;
+  padding: 10px;
+}
+
+.social:hover {
+  cursor: pointer;
+  width: 70px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .Note {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .Note {
+    width: 33%;
+    height: 250px;
+  }
+}
