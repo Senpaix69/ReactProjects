@@ -9,4 +9,6 @@ For projects Preview:
 <b>Project MakingCards:</b>
 <p>You can visit http://cardsbyreact.surge.sh</p>
 <b>Project Notepad:</b>
-<p>You can visit http://notepadbysenpai.surge.sh</p>
+<p>You can visit http://notesbysenpai.surge.sh</p>
+<b>Project testingCards:</b>
+<p>You can visit http://testingCards.surge.sh</p>
