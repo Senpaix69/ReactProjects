@@ -8,3 +8,5 @@ For projects Preview:
 <p>You can visit http://SenpaiProfile.surge.sh</p>
 <b>Project MakingCards:</b>
 <p>You can visit http://cardsbyreact.surge.sh</p>
+<b>Project Notepad:</b>
+<p>You can visit http://notepadbysenpai.surge.sh</p>
