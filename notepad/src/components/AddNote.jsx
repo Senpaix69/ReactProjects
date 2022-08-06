@@ -8,26 +8,24 @@ const AddNote = (props) => {
     const date = new Date();
     const today = date.getDay() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
 
-    const [notesArr, setNotesArr] = useState([]);
+    const [notesArr, setNotesArr] = useState([
+        {
+            key: nanoid(),
+            title: "Welcome",
+            text: "Hi, My name is Huraira Younas. This is one of my react project. I hope you will like it. \nVisit my github for more projects.",
+            date: "5-8-2022"
+        }
+    ]);
 
     useEffect(() => {
-        const savedNotes = JSON.parse(localStorage.getItem("notepad"))
-        if (savedNotes.length>0) {
-            console.log("Found")
+        const savedNotes = JSON.parse(localStorage.getItem('notepad'))
+        if (savedNotes) {
             setNotesArr(savedNotes)
-        } else {
-            setNotesArr([
-                {
-                    key: nanoid(),
-                    title: "Welcome",
-                    text: "Hi, My name is Huraira Younas. This is one of my react project. I hope you will like it. \nVisit my github for more projects.",
-                    date: "5-8-2022"
-                }])
         }
     }, [])
 
     useEffect(() => {
-        localStorage.setItem("notepad", JSON.stringify(notesArr))
+        localStorage.setItem('notepad', JSON.stringify(notesArr))
     }, [notesArr])
 
     const [formData, setFormData] = useState({ title: "", text: "" });
@@ -62,9 +60,13 @@ const AddNote = (props) => {
     }
 
     const deleteNote = (key) => {
-        if (window.confirm("You want to delete this note?")) {
-            const newNotes = notesArr.filter((note) => note.key !== key);
-            setNotesArr(newNotes)
+        if (key !== notesArr[0].key) {
+            if (window.confirm("You want to delete this note?")) {
+                const newNotes = notesArr.filter((note) => note.key !== key);
+                setNotesArr(newNotes)
+            }
+        } else {
+            alert("You can't delete welcome note")
         }
     }
 
