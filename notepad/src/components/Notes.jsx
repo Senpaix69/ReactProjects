@@ -3,7 +3,7 @@ import React from 'react'
 const Notes = (props) => {
     return (
         <div className='Note'>
-            <div className='Note--Card'>
+            <div className={`Note--Card ${`${props.darkMode}-Card`}`}>
                 <h1 className='Note--Title'>{props.title}</h1>
                 <div className="para">
                     <textarea

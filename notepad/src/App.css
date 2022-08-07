@@ -8,45 +8,23 @@
 
 body {
   padding: 0;
-  height: 100vh;
+  background-color: #000000;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .App {
   margin: auto;
+  padding: 5px;
   max-width: 970px;
-  min-width: 500px;
-}
-
-.Nav {
-  max-width: 970px;
-  min-width: 500px;
-  z-index: -9;
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  height: 10%;
-  border-radius: 300px;
-  filter: blur(40px);
-  -webkit-filter: blur(40px);
-}
-
-.Dark-Navbar {
-  background-color: #29e7cd;
-  background-image: linear-gradient(315deg, #29e7cd 2%, #fffbfc 74%);
-}
-
-.Light-Navbar {
-  background-color: #29e7cea0;
-  background-image: linear-gradient(315deg, #29e7ce39 0%, #000000 80%, #29e7cd 90%);
-}
-
-.Dark-Btn {
-  color: black;
+  min-width: 480px;
 }
 
 .Navbar {
   display: flex;
-  padding: 10px;
+  padding: 10px 15px;
   padding-top: 10px;
   height: 90px;
   justify-content: space-between;
@@ -59,8 +37,10 @@ body {
   font-size: 1rem;
 }
 
-h1:nth-child(1) {
+.head {
   color: rgb(91, 223, 199);
+  -webkit-text-stroke: 0.9px rgb(0, 0, 0);
+  -webkit-text-fill-color: #29e7cd;
 }
 
 button {
@@ -83,15 +63,17 @@ button:hover {
 .Search {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 10px 15px;
   padding-top: 0;
 }
 
 input {
   border: 4px solid rgb(91, 223, 199);
+  font-weight: 600;
   border-radius: 20px;
   width: 100%;
   padding: 20px;
+  outline-width: 0;
 }
 
 .Notes {
@@ -121,9 +103,14 @@ input {
   position: relative;
 }
 
+.Dark-Card {
+  background-color: rgba(10, 195, 170, 0.875);
+  background-image: linear-gradient(315deg, #1cd5bd 20%, #44e5d0dd 20%);
+}
+
 .Note--Card>h1 {
   font-size: large;
-  color: rgb(2, 83, 34);
+  font-weight: bolder;
   position: absolute;
   top: 5px;
 }
@@ -157,7 +144,6 @@ input {
   border-radius: 5px;
   border: none;
   padding: 5px;
-  outline-width: 0;
   background: none;
 }
 
@@ -180,18 +166,18 @@ textarea {
 
 .connect {
   margin: auto;
-  padding-top: 100px;
+  padding-top: 3em;
   padding-bottom: 2px;
   text-align: center;
 }
 
 .Footer {
-  padding-bottom: 20px;
+  padding-bottom: 8%;
 }
 
 .imag {
   background-color: #29e7cd;
-  background-image: linear-gradient(315deg, #29e7cd 1%, #fffbfc 80%,  #29e7cd 1%);
+  background-image: linear-gradient(315deg, #29e7cd 1%, #fffbfc 80%, #29e7cd 1%);
   display: flex;
   justify-content: center;
   padding: 0 20px;

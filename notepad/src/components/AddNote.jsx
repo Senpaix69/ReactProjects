@@ -4,28 +4,23 @@ import Notes from './Notes';
 
 
 const AddNote = (props) => {
-
     const date = new Date();
-    const today = date.getDay() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
-
-    const [notesArr, setNotesArr] = useState([
-        {
-            key: nanoid(),
-            title: "Welcome",
-            text: "Hi, My name is Huraira Younas. This is one of my react project. I hope you will like it. \nVisit my github for more projects.",
-            date: "5-8-2022"
-        }
-    ]);
-
-    useEffect(() => {
-        const savedNotes = JSON.parse(localStorage.getItem('notepad'))
-        if (savedNotes) {
-            setNotesArr(savedNotes)
-        }
-    }, [])
+    const toggle = props.darkMode ? "Dark" : "Light";
+    const [notesArr, setNotesArr] = useState(() => {
+        const localData = JSON.parse(localStorage.getItem("notepad"));
+        return localData?.length ? localData :
+            [
+                {
+                    key: nanoid(),
+                    title: "Welcome",
+                    text: "Hi, My name is Huraira Younas. This is one of my react project. I hope you will like it. \nVisit my github for more projects.",
+                    date: "Fri Aug 05 2022"
+                }
+            ]
+    });
 
     useEffect(() => {
-        localStorage.setItem('notepad', JSON.stringify(notesArr))
+        localStorage.setItem("notepad", JSON.stringify(notesArr))
     }, [notesArr])
 
     const [formData, setFormData] = useState({ title: "", text: "" });
@@ -47,10 +42,11 @@ const AddNote = (props) => {
                 key: nanoid(),
                 title: formData.title,
                 text: formData.text,
-                date: today
+                date: date.toDateString()
             }
             const newNotes = [...notesArr, newNote]
             setNotesArr(newNotes)
+            formData.key=null;
             formData.text = "";
             formData.title = "";
             formData.key = "";
@@ -82,7 +78,7 @@ const AddNote = (props) => {
     return (
         <>
             <div className='Note'>
-                <div className='Note--Card'>
+                <div className={`Note--Card ${`${toggle}-Card`}`}>
                     <input
                         type='text'
                         className='Add--Title'
@@ -101,7 +97,7 @@ const AddNote = (props) => {
                         >
                         </textarea>
                     </div>
-                    <span>Date: {today}</span>
+                    <span>Date: {date.toDateString()}</span>
                     <button onClick={handleNote} className="Add">add note</button>
                 </div>
             </div>
@@ -109,6 +105,7 @@ const AddNote = (props) => {
                 <Notes
                     key={note.key} id={note.key} title={note.title} text={note.text} date={note.date}
                     handleDelete={deleteNote}
+                    darkMode={toggle}
                 />
             )}
         </>

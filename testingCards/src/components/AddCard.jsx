@@ -56,6 +56,10 @@ const AddCard = () => {
       const newCards = [...cards, newCard];
       setCards(newCards);
       formData.key = null;
+      formData.title="";
+      formData.startDate="";
+      formData.endDate="";
+      formData.desc="";
     } else {
       alert("Emtpy Cards can't be added");
     }
