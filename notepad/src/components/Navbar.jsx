@@ -8,6 +8,7 @@ const Navbar = (props) => {
                 <h1 className='head'>Senpai's</h1>
                 <h1 style={{ color: props.darkMode ? "white" : "black" }}
                 >Notes</h1>
+                <img className='logo' src={require('./images/logo512.png')} alt='logo' />
             </div>
             <button
                 className={`${toggle}-Btn`}
