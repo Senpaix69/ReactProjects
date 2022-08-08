@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import { nanoid } from "nanoid";
+import html2canvas from 'html2canvas';
+
 
 const AddCard = () => {
   const [cards, setCards] = useState(() => {
@@ -8,14 +10,14 @@ const AddCard = () => {
     return localData?.length
       ? localData
       : [
-          {
-            key: nanoid(),
-            title: "Welcome Mount Fuji",
-            startDate: "12-02-2022",
-            endDate: "23-05-2022",
-            desc: "My journey to mount fuji was so good",
-          },
-        ];
+        {
+          key: nanoid(),
+          title: "Welcome Mount Fuji",
+          startDate: "12-02-2022",
+          endDate: "23-05-2022",
+          desc: "My journey to mount fuji was so good",
+        },
+      ];
   });
 
   useEffect(() => {
@@ -56,10 +58,10 @@ const AddCard = () => {
       const newCards = [...cards, newCard];
       setCards(newCards);
       formData.key = null;
-      formData.title="";
-      formData.startDate="";
-      formData.endDate="";
-      formData.desc="";
+      formData.title = "";
+      formData.startDate = "";
+      formData.endDate = "";
+      formData.desc = "";
     } else {
       alert("Emtpy Cards can't be added");
     }
@@ -74,6 +76,18 @@ const AddCard = () => {
       alert("Can't delete default card");
     }
   };
+
+  const downloadCard = (key) => {
+    const target = document.getElementById("downloadCard");
+    html2canvas(target).then((canvas) => {
+      const image = canvas.toDataURL("image/jpg", 0.9);
+      var anchor = document.createElement('a');
+      anchor.setAttribute("href", image);
+      anchor.setAttribute("download", "quote-pic.jpg");
+      anchor.click();
+      anchor.remove();
+    })
+  }
 
   return (
     <>
@@ -99,7 +113,7 @@ const AddCard = () => {
               className="input--EndDate"
               name="endDate"
               onChange={handleChange}
-              value={formData.end}
+              value={formData.endDate}
             ></input>
           </div>
           <textarea
@@ -121,6 +135,7 @@ const AddCard = () => {
           endDate={card.endDate}
           desc={card.desc}
           handleDelete={deleteCard}
+          handleDownload={downloadCard}
         />
       ))}
     </>

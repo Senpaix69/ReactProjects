@@ -19,7 +19,7 @@ body {
   margin: auto;
   padding: 5px;
   max-width: 970px;
-  min-width: 480px;
+  min-width: 350px;
 }
 
 .Navbar {
@@ -259,7 +259,24 @@ textarea {
 
   .heade {
     margin-left: 4rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
   }
+  .Footer--con h1 {
+    font-size: 1.5rem;
+  }
+  .head1 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    font-size: x-small;
+  }
+
+  .Card-logo {
+    max-width: 55px;
+  }
+
 }
 
 @media screen and (min-width: 820px) {

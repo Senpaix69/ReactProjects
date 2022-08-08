@@ -7,7 +7,7 @@ const Navbar = (props) => {
             <div className='Navbar--Header'>
                 <img className='logo' src={require('./images/logo512.png')} alt='logo' />
                 <h1 className='head heade'>Senpai's</h1>
-                <h1 style={{ color: props.darkMode ? "white" : "black" }}
+                <h1 className='head1' style={{ color: props.darkMode ? "white" : "black" }}
                 >Notes</h1>
             </div>
             <button

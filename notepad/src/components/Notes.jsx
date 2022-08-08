@@ -12,7 +12,7 @@ const Notes = (props) => {
                         readOnly ></textarea>
                 </div>
                 <span>Date: {props.date}</span>
-                <img src={require('./images/senpai1.png')} alt='logo' />
+                <img className='Card-logo' src={require('./images/senpai1.png')} alt='logo' />
                 <button className="delete" onClick={() => props.handleDelete(props.id)}>delete note</button>
             </div>
         </div>
