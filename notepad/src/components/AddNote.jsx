@@ -46,7 +46,7 @@ const AddNote = (props) => {
             }
             const newNotes = [...notesArr, newNote]
             setNotesArr(newNotes)
-            formData.key=null;
+            formData.key = null;
             formData.text = "";
             formData.title = "";
             formData.key = "";
@@ -98,6 +98,7 @@ const AddNote = (props) => {
                         </textarea>
                     </div>
                     <span>Date: {date.toDateString()}</span>
+                    <img src={require('./images/senpai1.png')} alt='logo' />
                     <button onClick={handleNote} className="Add">add note</button>
                 </div>
             </div>

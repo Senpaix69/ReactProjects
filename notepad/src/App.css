@@ -40,8 +40,7 @@ body {
 }
 
 .logo {
-  width: 25%;
-  max-width: 100px;
+  width: 100px;
 }
 
 .head {
@@ -100,6 +99,13 @@ input {
   height: 250px;
 }
 
+.Note img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+}
+
 .Note--Card {
   padding: 10px;
   width: 94%;
@@ -111,8 +117,21 @@ input {
 }
 
 .Dark-Card {
-  background-color: rgba(10, 195, 170, 0.875);
-  background-image: linear-gradient(315deg, #1cd5bd 20%, #44e5d0dd 20%);
+  background-color: rgb(4, 4, 4);
+  background-image: linear-gradient(315deg, rgba(13, 171, 137, 0.738) 30%, #40c6b4dc 20%, rgb(3, 177, 139) 60%);
+}
+
+.Dark-Card ::placeholder {
+  color: black;
+}
+
+.Search input[type="text"] {
+  background: transparent;
+  color: black;
+}
+
+.Dark-Search input[type="text"] {
+  color: white;
 }
 
 .Note--Card>h1 {
@@ -169,17 +188,14 @@ textarea {
 .Footer {
   display: flex;
   flex-direction: column;
-}
-
-.connect {
-  margin: auto;
-  padding-top: 3em;
-  padding-bottom: 2px;
-  text-align: center;
+  position: relative;
 }
 
 .Footer {
-  padding-bottom: 8%;
+  margin: auto;
+  max-width: 500px;
+  padding: 0px 10px;
+  padding-bottom: 40px;
 }
 
 .imag {
@@ -194,6 +210,25 @@ textarea {
   width: 500px;
   max-width: 100px;
   min-width: 350px;
+}
+
+.Dark-Footer {
+  background-color: rgb(4, 4, 4);
+  background-image: linear-gradient(315deg, rgba(13, 171, 137, 0.738) 30%, #40c6b4dc 20%, rgb(3, 177, 139) 60%);
+}
+
+.Footer--con {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.Footer--con>h1 {
+  font-size: 30px;
+}
+
+.Footer--con>img {
+  width: 110px;
 }
 
 #git {
@@ -215,6 +250,15 @@ textarea {
   .Note {
     width: 100%;
     height: 250px;
+  }
+
+  .logo {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .heade {
+    margin-left: 4rem;
   }
 }
 

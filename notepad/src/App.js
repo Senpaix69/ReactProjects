@@ -29,7 +29,7 @@ function App() {
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
       />
-      <Search handleSearch={setSearch} />
+      <Search handleSearch={setSearch} darkMode={darkMode}/>
       <div className='Notes'>
         <AddNote search={search} darkMode={darkMode} />
       </div>

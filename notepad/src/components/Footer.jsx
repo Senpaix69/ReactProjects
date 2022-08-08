@@ -1,10 +1,13 @@
 import React from 'react'
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <div className='Footer'>
-            <h1 className="connect head">Connect With Me</h1>
-            <div className='imag'>
+            <div className='Footer--con'>
+                <img src={require('./images/senpai.png')} alt='logo' />
+                <h1 className='head'>Connect With Me</h1>
+            </div>
+            <div className={`imag ${`${props.darkMode ? "Dark" : ""}-Footer`}`}>
                 <a href="https://www.facebook.com/hurri.isbad"
                     target={'_blank'} rel='noreferrer'>
                     <img className="social" src={require('./images/facebook.png')} alt='facebook' />

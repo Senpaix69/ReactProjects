@@ -2,7 +2,7 @@ import React from 'react'
 
 const Search = (props) => {
     return (
-        <div className='Search'>
+        <div className={`Search ${`${props.darkMode ? "Dark" : ""}-Search`}`}>
             <input
                 type="text"
                 placeholder="Search for your notes..."
