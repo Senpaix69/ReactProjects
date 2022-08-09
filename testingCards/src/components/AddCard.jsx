@@ -77,7 +77,7 @@ const AddCard = () => {
     }
   };
 
-  const downloadCard = (key) => {
+  const downloadCard = () => {
     const target = document.getElementById("downloadCard");
     html2canvas(target).then((canvas) => {
       const image = canvas.toDataURL("image/jpg", 0.9);

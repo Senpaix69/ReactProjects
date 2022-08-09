@@ -1,0 +1,198 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #EAF0F0;
+}
+
+header {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  width: 100%;
+  background-color: #5C4169;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 1rem 1rem;
+}
+
+footer > p {
+  margin: 0;
+}
+
+header > h1 {
+  font-family: 'Pacifico', 'Montserrat', sans-serif;
+  color: #5C4169;
+  margin-bottom: 1.2rem;
+}
+
+.container {
+  height: 100vh;
+  padding-top: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+}
+
+.main-left {
+  font-weight: bold;
+  color: #5C4169;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-left-button {
+  width: 150px;
+  height: 45px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 2px solid white;
+  color: #5C4169;
+  border-radius: 25px;
+  margin-bottom: 1.2rem;
+}
+
+.main-left-button:hover {
+  background-color: white;
+}
+
+.main-left-button:active {
+  background-color: rgb(214, 212, 212);
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post-button {
+  background-color: #5C4169;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  height: 45px;
+  width: 150px;
+  margin-top: 2rem;
+}
+
+.post-button:hover {
+  background-color: #856096;
+}
+
+.post-button:active {
+  background-color: #a87abd;
+}
+
+.post-download {
+  background-color: rgb(255, 255, 255);
+  color: #5C4169;
+  border: none;
+  border-radius: 25px;
+  height: 45px;
+  width: 130px;
+  margin-left: 12px;
+}
+
+.post-download:hover {
+  background-color: rgb(231, 230, 230);
+}
+
+.post-download:active {
+  background-color: rgb(245, 244, 244);
+}
+
+.post-download > img {
+  width: 16px;
+  margin-right: 5px;
+}
+
+.post-main {
+  background-color: #F7F5F7;
+  padding: 20px;
+  height: 350px;
+  width: 350px;
+  display: grid;
+  word-spacing: 0.2rem;
+  gap: 5px;
+  grid-template-rows: 80px 80px repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "heading heading heading pic pic"
+                       ". . . pic pic"
+                       "quote quote quote quote quote"
+                       "quote quote quote quote quote"
+                       "quote quote quote quote quote";
+}
+
+.post-main-heading {
+  grid-area: heading;
+}
+
+.post-main-heading > h3 {
+  margin: 1.2rem 0;
+  font-weight: medium;
+  font-size: 1.5rem;
+}
+
+.post-main-heading > p {
+  font-weight: bold;
+  color: #00000088;
+}
+
+.post-main > img {
+  width: 120px;
+  height: 140px;
+  grid-area: pic;
+}
+
+.post-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-quote {
+  grid-area: quote;
+}
+
+.post-quote > h6 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.post-quote > p {
+  font-size: 13px;
+  font-weight: bold;
+  color: #00000088;
+}
+
+.second {
+  text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+  .main-left {
+    flex-direction: row;
+    height: 35px;
+    margin-bottom: 1.5rem;
+  }
+
+  .main-left-button {
+    margin: 5px;
+  }
+
+}
