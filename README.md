@@ -2,7 +2,7 @@
 <h4>I will be uploading my projects basis on React whille learning reactJs</h4>
 For projects Preview:
 </br>
-Basic Projects:
+<h2>Basic Projects:</h2>
 <b>Project bnb Clone:</b>
 <p>You can visit http://bnbclone.surge.sh</p>
 <b>Project Profile Page:</b>
@@ -11,11 +11,13 @@ Basic Projects:
 <p>You can visit http://cardsbyreact.surge.sh</p>
 <b>Project Testing Cards:</b>
 <p>You can visit http://testingCards.surge.sh</p>
-Intermediate Projects:
+
+<h2>Intermediate Projects:</h2>
 <b>Project Quote Generator:</b>
 <p>You can visit http://quotescataloge.surge.sh</p>
 <b>Project Notes:</b>
 <p>You can visit http://notesbysenpai.surge.sh</p>
-Advance Prohect:
+
+<h2>Advance Project:</h2>
 <b>Project Search Engine:</b>
 <p>You can visit http://senpaisearch.surge.sh</p>
