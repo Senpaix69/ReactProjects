@@ -2,15 +2,20 @@
 <h4>I will be uploading my projects basis on React whille learning reactJs</h4>
 For projects Preview:
 </br>
-<b>Project bnbClone:</b>
+Basic Projects:
+<b>Project bnb Clone:</b>
 <p>You can visit http://bnbclone.surge.sh</p>
-<b>Project ProfilePage:</b>
+<b>Project Profile Page:</b>
 <p>You can visit http://SenpaiProfile.surge.sh</p>
-<b>Project MakingCards:</b>
+<b>Project Making Cards:</b>
 <p>You can visit http://cardsbyreact.surge.sh</p>
-<b>Project testingCards:</b>
+<b>Project Testing Cards:</b>
 <p>You can visit http://testingCards.surge.sh</p>
-<b>Project Notepad:</b>
-<p>You can visit http://notesbysenpai.surge.sh</p>
-<b>Project QuoteGenerator:</b>
+Intermediate Projects:
+<b>Project Quote Generator:</b>
 <p>You can visit http://quotescataloge.surge.sh</p>
+<b>Project Notes:</b>
+<p>You can visit http://notesbysenpai.surge.sh</p>
+Advance Prohect:
+<b>Project Search Engine:</b>
+<p>You can visit http://senpaisearch.surge.sh</p>
