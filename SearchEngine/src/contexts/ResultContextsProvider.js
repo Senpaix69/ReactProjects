@@ -10,10 +10,11 @@ export const ResultContextProvider = ({ children }) => {
 
     const getResults = async (type) => {
         setIsLoading(true);
-        await fetch(`${baseURL}${type}&num=40`, {
+        await fetch(`${baseURL}${type}&num=20`, {
             method: "GET",
             headers: {
                 'X-User-Agent': 'desktop',
+                'X-Proxy-Location': 'US',
                 'X-RapidAPI-Key': '8af0588346msh7d93fee7a84e5dep123274jsn83d442f04bc8',
                 'X-RapidAPI-Host': 'google-search3.p.rapidapi.com'
             }

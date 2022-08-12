@@ -1,6 +1,6 @@
 {
-  "name": "notepad",
-  "version": "0.2.0",
+  "name": "notes",
+  "version": "0.2.5",
   "private": true,
   "dependencies": {
     "@capacitor/android": "^4.0.1",

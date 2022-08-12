@@ -1,19 +1,33 @@
-import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Routes from "./components/Routes";
+import './App.css';
+import { Helmet } from 'react-helmet';
+import React, { useState, useEffect } from 'react';
+import Navbar from './components/Navbar/Navbar';
+import Routes from './components/Routes/Routes';
+import Footer from './components/Footer/Footer';
 
 function App() {
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(() => {
+    const theme = JSON.parse(localStorage.getItem('theme'))
+    return theme ? theme : false;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('theme', JSON.stringify(darkTheme))
+  }, [darkTheme]);
+  console.log(darkTheme)
+
   return (
-    <div className={darkTheme ? 'dark' : ''}>
-      <div className="bg-gray-100 dark:bg-gray-900 dark:text-gray-200 min-h-screen">
-        <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
-        <Routes />
-        <Footer />
+    <div className='App'>
+      <Helmet>
+        <style>{`body { background-color: ${darkTheme ? "#27272a" : "white"}; }`}</style>
+      </Helmet>
+      <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+      <div className='Routes'>
+        <Routes darkTheme={darkTheme} />
       </div>
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default App;

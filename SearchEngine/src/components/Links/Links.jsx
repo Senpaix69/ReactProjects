@@ -1,4 +1,5 @@
 import React from 'react';
+import './Links.css';
 import { NavLink } from 'react-router-dom';
 
 const links = [
@@ -8,11 +9,11 @@ const links = [
     { url: '/videos', text: '🎥 Videos' },
 ]
 
-const Links = () => {
+const Links = ({ darkTheme }) => {
     return (
-        <div className='flex sm:justify-aroud justify-between items-center mt-4'>
-            {links.map(({ url, text }) => (
-                <NavLink to={url} className='m-3' exact activeClassName='text-blue-700 border-b-2 dark:text-blue-300 border-blue-700 pb-2'>
+        <div className={`Links ${darkTheme ? "" : "Links-d"}`}>
+            {links.map(({ url, text }, index) => (
+                <NavLink to={url} key={index} className='Links-List'>
                     {text}
                 </NavLink>
             ))}
@@ -20,4 +21,4 @@ const Links = () => {
     )
 }
 
-export default Links
+export default Links;
