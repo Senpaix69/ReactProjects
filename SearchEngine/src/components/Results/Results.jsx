@@ -9,13 +9,13 @@ import Loading from '../Loading/Loading';
 import NewsCard from '../Cards/SearchCard/NewsCard';
 
 const Result = ({ darkTheme }) => {
-  const { isLoading, result, getResults, searchTerm } = useResultContext();
+  let { isLoading, result, getResults, searchTerm } = useResultContext();
   const location = useLocation();
 
   useEffect(() => {
     if (searchTerm) {
       if (location.pathname === '/videos') {
-        getResults(`/search/q=${searchTerm} videos from youtube`);
+        getResults(`/search/q=${searchTerm} videos+from+youtube$num=20`);
       } else {
         getResults(`${location.pathname}/q=${searchTerm}&num=40`);
       }
@@ -24,6 +24,7 @@ const Result = ({ darkTheme }) => {
 
   if (isLoading) return <Loading />
 
+  console.log("pathname", location.pathname);
   console.log(result);
 
   switch (location.pathname) {
@@ -46,8 +47,8 @@ const Result = ({ darkTheme }) => {
     case '/news':
       return (
         <div className='Result'>
-          {result?.map(({ links, id, source, title }) => (
-            <NewsCard links={links} key={id} source={source} title={title} darkTheme={darkTheme} />
+          {result?.map(({ links, id, source, title }, index) => (
+            <NewsCard key={id ? id : index} links={links} source={source} title={title} darkTheme={darkTheme} />
           ))}
         </div>
       )

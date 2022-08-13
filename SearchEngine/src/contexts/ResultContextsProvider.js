@@ -10,7 +10,7 @@ export const ResultContextProvider = ({ children }) => {
 
     const getResults = async (type) => {
         setIsLoading(true);
-        await fetch(`${baseURL}${type}&num=20`, {
+        await fetch(`${baseURL}${type}`, {
             method: "GET",
             headers: {
                 'X-User-Agent': 'desktop',

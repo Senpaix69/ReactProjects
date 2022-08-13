@@ -6,7 +6,7 @@ const SearchCard = ({ link, title, desc, darkTheme }) => {
     <div className={`SearchCard ${darkTheme ? "SearchCard-d" : ""}`}>
       <a href={link} target="_blank" rel='noreferrer'>
         <p className='SearchCard-Link'>
-          {link.length > 30 ? link.substring(0, 30) : link}
+          {link?.length > 30 ? link.substring(0, 30) : link}
         </p>
         <p className='SearchCard-Title'>
           {title}

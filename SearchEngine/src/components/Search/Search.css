@@ -41,6 +41,16 @@
     font-size: 15px;
 }
 
+.nav-link {
+    color: black;
+    padding: 4px 6px;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
 .Search-Input {
     width: 100%;
     background-color: transparent;

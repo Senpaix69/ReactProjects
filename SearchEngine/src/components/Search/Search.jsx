@@ -5,6 +5,7 @@ import { useResultContext } from '../../contexts/ResultContextsProvider';
 import darkSearch from '../images/dark-search.png';
 import lightSearch from '../images/white-search.png';
 import Links from '../Links/Links';
+import { NavLink } from 'react-router-dom';
 
 
 const Search = ({ darkTheme, stat, setStat }) => {
@@ -20,8 +21,12 @@ const Search = ({ darkTheme, stat, setStat }) => {
   }, [text])
 
   useEffect(() => {
-    if (debounceValue && !stat) {
-      setSearchTerm(debounceValue);
+    if (debounceValue) {
+      if (!stat) {
+        setSearchTerm(debounceValue);
+      } else {
+        setSearchTerm('');
+      }
     }
   }, [debounceValue]);
 
@@ -31,7 +36,7 @@ const Search = ({ darkTheme, stat, setStat }) => {
         <img src={darkTheme ? darkSearch : lightSearch} alt="Search-Icon" className="Search-Icon" />
         <input type="text" className='Search-Input' placeholder='Search...' value={text} onChange={(e) => setText(e.target.value)} />
       </div>
-      {!stat ? <Links darkTheme={darkTheme} /> : <button className='Search-btn' onClick={() => setStat(text ? false : true)}>Search</button>}
+      {!stat ? <Links darkTheme={darkTheme} /> : <button className='Search-btn' onClick={() => setStat(text ? false : true)}><NavLink className='nav-link' to={text ? '/search' : ''}>Search</NavLink></button>}
     </div>
   )
 }

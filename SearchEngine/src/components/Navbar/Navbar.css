@@ -9,6 +9,30 @@
     background-color: transparent;
 }
 
+.Nav--btn1 {
+    position: absolute;
+    margin-top: 12px;
+    right: 100px;
+    border-radius: 10px;
+    padding: 4px 6px;
+    cursor: pointer;
+    font-size: 12px;
+    background-color: transparent;
+}
+
+.Nav--btn1>a {
+    text-decoration: none;
+    color: black;
+}
+
+.Nav--btn1>a:hover{
+    color: white;
+}
+
+.bg-d>a{
+    color: white;
+}
+
 .Nav--Title {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -32,6 +56,7 @@
     margin-top: 2px;
     font-family: 'Poppins', sans-serif;
     margin-right: 20px;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -53,13 +78,11 @@
     }
 
     .Nav--btn {
-        position: absolute;
         right: 20px;
         top: 16px;
-        border-radius: 10px;
-        padding: 4px 6px;
-        cursor: pointer;
-        font-size: 12px;
-        background-color: transparent;
+    }
+    .Nav--btn1 {
+        right: 110px;
+        top: 16px;
     }
 }
