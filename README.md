@@ -1,6 +1,6 @@
 # ReactProjects
 <h4>I will be uploading my projects basis on React whille learning reactJs</h4>
-For projects Preview:
+Previews:
 </br>
 <h2>Basic Projects:</h2>
 <b>Project bnb Clone:</b>
